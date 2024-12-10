@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="style.css">
+<ul>
+  <li>
+    <div class="details">
+      <h2>Foamboard</h2>
+      <div class="product">
+        <img src="/asset/foamboard.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Alvaboard</h2>
+      <div class="product">
+        <img src="/asset/alva2.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Ganci Akrilik</h2>
+      <div class="product">
+        <img src="/asset/ganci.svg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Frame Akrilik</h2>
+      <div class="product">
+        <img src="/asset/frame.png">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Neon Box Akrilik</h2>
+      <div class="product">
+        <img src="/asset/neonbox.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Standee Akrilik</h2>
+      <div class="product">
+        <img src="/asset/standee.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Send Icon Akrilik</h2>
+      <div class="product">
+        <img src="/asset/sendicon.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Tent Card Akrilik</h2>
+      <div class="product">
+        <img src="/asset/tentcard.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Jam Akrilik</h2>
+      <div class="product">
+        <img src="/asset/jamakrilik.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Box Akrilik + Gembok</h2>
+      <div class="product">
+        <img src="/asset/boxakrilik.jpg">
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="details">
+      <h2>Display Akrilik</h2>
+      <div class="product">
+        <img src="/asset/displayakrilik.jpg">
+      </div>
+    </div>
+  </li>
+</ul>
+<button onclick="navigateBack()" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4b6b8c;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+" onmouseover="this.style.backgroundColor='#3a556a'; this.style.transform='scale(1.1)';"
+  onmouseout="this.style.backgroundColor='#4b6b8c'; this.style.transform='scale(1)'">
+  &#8592;
+</button>
+
+<script>
+  function navigateBack() {
+    // Pastikan data selectedOrder disimpan saat pindah halaman
+    const currentOrder = localStorage.getItem('selectedOrder');
+    if (currentOrder) {
+      // Simpan data order saat ini sebelum kembali
+      localStorage.setItem('selectedOrder', currentOrder);
+    }
+
+    // Navigasi ke halaman sebelumnya
+    window.history.back();
+  }
+</script>

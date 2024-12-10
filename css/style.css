@@ -1,0 +1,254 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,900,800,500,700,600);
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 6px;
+  background: #fbfbfb;
+  padding: 0; /* Hapus padding untuk menghindari pergeseran */
+  margin: 0; /* Pastikan tidak ada margin default */
+  font-family: 'Work Sans', sans-serif;
+  height: 100%; /* Pastikan body mengambil seluruh tinggi viewport */
+  display: flex; /* Tambahkan flexbox */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (min-width: 860px) {
+  html, body {
+    font-size: 8px;
+    padding: 30px 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 10px;
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 200rem;
+  min-width: 900px;
+  min-height: 1100px;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 35px 20px #DDE5EE;
+}
+
+.slider-wrapper .slider {
+  position: relative;
+  height: 65rem;
+  min-height: 1800px;
+
+  padding: 5rem 0;
+}
+
+.slider-wrapper .slider::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slider-wrapper .slider .slide-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-wrapper .slide-navigation__squares, .slider-wrapper .slide-navigation__txt {
+  width: 15%;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+
+.slider-wrapper .slide-navigation__squares::after, .slider-wrapper .slide-navigation__txt::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slider-wrapper .slide-navigation__txt {
+  display: block;
+  height: 100%;
+}
+
+.slider-wrapper .slide-navigation__txt ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  display: table-cell;
+  width: 100rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 0;
+          transform-origin: 0;
+  margin-left: calc(50% - 0.14rem);
+}
+
+.slider-wrapper .slide-navigation__txt li {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin: 0 1.2rem; /* Mengubah margin untuk mengatur jarak antar elemen ke samping */
+  position: relative;
+  display: inline-block; /* Mengubah dari display: block ke display: inline-block */
+  font-size: 3rem;
+  font-weight: 600;
+  color: #A1A5B8;
+}
+
+
+
+.slider-wrapper .slide-navigation__txt li span {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  display: block;
+}
+
+.slider-wrapper .slide-navigation__txt li span.active {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+  color: #E34D67;
+}
+
+.slider-wrapper .slides-container {
+  position: relative;
+  width: 80%;
+  float: left;
+  height: 100%;
+}
+
+.slider-wrapper .slide {
+  position: absolute;
+  display: flex; /* Flexbox untuk mengatur gambar secara horizontal */
+  flex-direction: row; /* Gambar dalam satu baris */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider-wrapper .slide img {
+  max-width: 100%;
+  flex: 1 1 50%; /* Membagi lebar antara dua gambar */
+  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+     object-position: center; /* Menempatkan gambar di tengah */
+
+}
+
+.slider-wrapper .slide .slide-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 5rem 5.8rem;
+  overflow: hidden;
+}
+
+.slider-wrapper .slide .slide-content h1 {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  font-size: 15rem;
+  text-align: left;
+  margin: 0;
+  opacity: 0.6;
+  position: relative;
+}
+
+.slider-wrapper .slide .slide-content h2 {
+  color: #B8001F;
+  font-size: 7rem;
+  max-width: 80%;
+  margin: 0;
+  margin-top: -2rem;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+}
+
+.slider-wrapper .slide .slide-txt p {
+  margin: 0;
+  max-width: 55%;
+  color: #666666;
+  font-size: 2rem;
+  line-height: 1.4;
+  float: left;
+}
+.slider-wrapper .slide .slide-txt button {
+  display: block;
+  margin-top: 3rem;
+  float: left;
+  width: 30rem;
+  height: 12rem;
+  text-align: center;
+  background: rgba(255, 255, 255); /* Putih transparan */
+  border: 0.28rem solid rgba(255, 255, 255);
+  text-transform: uppercase;
+  padding: 0.8rem 0.5rem;
+  font-size: 2.80rem;
+  color: #B8001F; /* Warna teks */
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  outline: none;
+  overflow: hidden;
+  border-radius: 1rem; /* Membuat sudut rounded */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+  transition: all 0.3s ease; /* Transisi halus */
+}
+
+.slider-wrapper .slide .slide-txt button:hover {
+  color: #ffffff; /* Ubah warna teks menjadi putih */
+  background: #B8001F; /* Warna latar belakang tombol */
+  border: 0.28rem solid #B8001F;
+
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Shadow lebih tegas saat hover */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    min-width: 100%;
+    box-shadow: none;
+  }
+
+  .slider-wrapper .slider {
+    height: 45rem;
+    padding: 2rem 0;
+  }
+
+  .slider-wrapper .slide .slide-content h1 {
+    font-size: 6rem;
+  }
+
+  .slider-wrapper .slide .slide-content h2 {
+    font-size: 3.2rem;
+    margin-top: -4rem;
+  }
+
+  .slider-wrapper .slide .slide-txt p {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .slider-wrapper .slide .slide-txt button {
+    width: 14rem;
+    font-size: 1.2rem;
+  }
+}

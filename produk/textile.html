@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="style.css">
+<ul>
+    <li>
+      <div class="details">
+        <h2>Print DTF Meteran</h2>
+        <div class="product">
+          <img src="/asset/dtf.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Print Kain Tanpa Jahit</h2>
+        <div class="product">
+          <img src="/asset/satintanpa.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Bendera + Jahit + Tali</h2>
+        <div class="product">
+          <img src="/asset/bendera.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Bendera + Rumbai</h2>
+        <div class="product">
+          <img src="/asset/benderarumbai.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Umbul-Umbul</h2>
+        <div class="product">
+          <img src="/asset/umubl.jpg">
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <button onclick="navigateBack()" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4b6b8c;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+" onmouseover="this.style.backgroundColor='#3a556a'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#4b6b8c'; this.style.transform='scale(1)'">
+  &#8592;
+</button>
+
+<script>
+    function navigateBack() {
+        // Pastikan data selectedOrder disimpan saat pindah halaman
+        const currentOrder = localStorage.getItem('selectedOrder');
+        if (currentOrder) {
+            // Simpan data order saat ini sebelum kembali
+            localStorage.setItem('selectedOrder', currentOrder);
+        }
+
+        // Navigasi ke halaman sebelumnya
+        window.history.back();
+    }
+</script>

@@ -1,0 +1,141 @@
+<link rel="stylesheet" href="style.css">
+<ul>
+    <li>
+      <div class="details">
+        <h2>Plakat Akrilik</h2>
+        <div class="product">
+          <img src="/asset/plakatakrilik.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Plakat Kayu</h2>
+        <div class="product">
+          <img src="/asset/plakatkayu.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Plat Branding Kuningan</h2>
+        <div class="product">
+          <img src="/asset/platkuning.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Tumbler Custom</h2>
+        <div class="product">
+          <img src="/asset/tumblerr.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Sticker UV</h2>
+        <div class="product">
+          <img src="/asset/stickeruv.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>ID Card UV</h2>
+        <div class="product">
+          <img src="/asset/idcarduv.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>E-Money Custom</h2>
+        <div class="product">
+          <img src="/asset/emoney.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Medali Custom</h2>
+        <div class="product">
+          <img src="/asset/medali.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Korek Api</h2>
+        <div class="product">
+          <img src="/asset/korekapi.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Flash Disk Card</h2>
+        <div class="product">
+          <img src="/asset/flashdisk.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>DTF UV</h2>
+        <div class="product">
+          <img src="/asset/dtfuv.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Name Tag UV</h2>
+        <div class="product">
+          <img src="/asset/nametag.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Pulpen Branding</h2>
+        <div class="product">
+          <img src="/asset/pulpengepeng.jpg">
+        </div>
+      </div>
+    </li>
+  </ul>
+  <button onclick="navigateBack()" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4b6b8c;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+" onmouseover="this.style.backgroundColor='#3a556a'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#4b6b8c'; this.style.transform='scale(1)'">
+  &#8592;
+</button>
+
+<script>
+    function navigateBack() {
+        // Pastikan data selectedOrder disimpan saat pindah halaman
+        const currentOrder = localStorage.getItem('selectedOrder');
+        if (currentOrder) {
+            // Simpan data order saat ini sebelum kembali
+            localStorage.setItem('selectedOrder', currentOrder);
+        }
+
+        // Navigasi ke halaman sebelumnya
+        window.history.back();
+    }
+</script>

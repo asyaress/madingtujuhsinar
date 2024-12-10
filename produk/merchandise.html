@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="style.css">
+<ul>
+    <li>
+      <div class="details">
+        <h2>Topi Custom</h2>
+        <div class="product">
+          <img src="/asset/topi.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Kaos Custom</h2>
+        <div class="product">
+          <img src="/asset/kaos.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Tas Sponbond Custom</h2>
+        <div class="product">
+          <img src="/asset/sponbond.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Tas Canvas Custom</h2>
+        <div class="product">
+          <img src="/asset/totebag.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Jam Dinding Custom</h2>
+        <div class="product">
+          <img src="/asset/jamdinding.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Bantal Custom</h2>
+        <div class="product">
+          <img src="/asset/bantalcustom.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Lanyard Custom</h2>
+        <div class="product">
+          <img src="/asset/lanyard.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Pin & Ganci</h2>
+        <div class="product">
+          <img src="/asset/pinganci.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Mug Custom</h2>
+        <div class="product">
+          <img src="/asset/mug.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Payung Custom</h2>
+        <div class="product">
+          <img src="/asset/payung.jpg">
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="details">
+        <h2>Print Sublim Meteran</h2>
+        <div class="product">
+          <img src="/asset/sublimmeteran.jpg">
+        </div>
+      </div>
+    </li>
+
+  </ul>
+  <button onclick="navigateBack()" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #4b6b8c;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+" onmouseover="this.style.backgroundColor='#3a556a'; this.style.transform='scale(1.1)';" onmouseout="this.style.backgroundColor='#4b6b8c'; this.style.transform='scale(1)'">
+  &#8592;
+</button>
+
+<script>
+    function navigateBack() {
+        // Pastikan data selectedOrder disimpan saat pindah halaman
+        const currentOrder = localStorage.getItem('selectedOrder');
+        if (currentOrder) {
+            // Simpan data order saat ini sebelum kembali
+            localStorage.setItem('selectedOrder', currentOrder);
+        }
+
+        // Navigasi ke halaman sebelumnya
+        window.history.back();
+    }
+</script>
